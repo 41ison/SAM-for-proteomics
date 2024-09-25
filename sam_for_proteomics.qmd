@@ -71,11 +71,11 @@ Run the SAM analysis using the `samr` package. The function `SAM` requires the f
 
 ```{r}
 # run the SAM analysis
-sam_result <- samr::SAM(x = imputation_list, 
+sam_result <- samr::SAM(x = abundance_matrix, 
                 y = condition_for_design,
                 resp.type = "Two class unpaired",
-                geneid = rownames(imputation_list),
-                genenames = rownames(imputation_list),
+                geneid = rownames(abundance_matrix),
+                genenames = rownames(abundance_matrix),
                 s0 = 0.1, 
                 s0.perc = NULL, 
                 nperms = 1000,
