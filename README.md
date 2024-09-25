@@ -4,7 +4,7 @@
 The Significance Analysis of Microarrays (SAM) was developed by Tusher et al. (2001) and is based on the t-test with a permutation-based approach to estimate the false discovery rate (FDR). The permutation-based FDR has a reduced error type II rate compared to the Benjamini-Hochberg correction (BH) and is currently implemented in [Perseus software](https://link.springer.com/protocol/10.1007/978-1-4939-7493-1_7) for proteomics data analysis. Check the S0 parameter in the statistics session of Perseus.
 
 Read the original paper [here](https://www.pnas.org/content/98/9/5116).
->Tusher, V., Tibshirani, R. and Chu, G. (2001): Significance analysis of microarrays applied to the ionizing radiation response" PNAS 2001 98: 5116-5121, (Apr 24). http://www-stat.stanford.edu/~tibs/sam
+>Tusher, V., Tibshirani, R. and Chu, G. (2001): Significance analysis of microarrays applied to the ionizing radiation response" PNAS 2001 98: 5116-5121, (Apr 24).
 
 :bulb:Follow the instructions to install the package [samr](https://github.com/MikeJSeo/SAM) and its dependencies.
 The `samr` package is easy to use and has a shiny app that work well. This repositroy is only for help you to customize the results.
