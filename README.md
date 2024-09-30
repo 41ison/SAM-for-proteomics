@@ -11,7 +11,7 @@ The `samr` package is easy to use and has a shiny app that work well. This repos
 
 ### Load the important libraries
 
-```
+```r
 library(tidyverse)
 library(samr)
 ```
@@ -22,7 +22,7 @@ Check the `class()` of the object. If it is a dataframe, coerce it to matrix wit
 calculate the average abundance of the proteins per condition and correlate them.
 In this example, we are using a matrix of log2 abundance values containing two groups of samples: Control and Treated. The samples are named as `Control_1`, `Control_2`, `Control_3`, `Treated_1`, `Treated_2`, and `Treated_3`. 
 
-```
+```r
 mean_plot <- abundance_matrix %>%
     as.data.frame() %>%
     rownames_to_column("protein") %>%
@@ -58,7 +58,7 @@ Run the SAM analysis using the `samr` package. The function `SAM` requires the f
 - `fdr.output`: the false discovery rate threshold for the analysis.
 - `logged2`: if the data is log2 transformed. If not, do it.
 
-```
+```r
 # run the SAM analysis
 sam_result <- samr::SAM(x = abundance_matrix, 
                 y = condition_for_design,
@@ -87,7 +87,7 @@ samr::samr.plot(sam_result$samr.obj,
 
 ## Extract the significant proteins and reconstruct the SAM Q-Q plot using ggplot2
 
-```
+```r
 # extract the significant proteins
 proteins_up <- data.frame(sam_result$siggenes.table$genes.up)
 proteins_low <- data.frame(sam_result$siggenes.table$genes.lo)
